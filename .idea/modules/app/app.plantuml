@@ -1,0 +1,250 @@
+@startuml
+
+title __SOCIOBUZZ.APP's Class Diagram__\n
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.AddCommentActivity {
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.AllUsersViewholder {
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.All_UserMmber {
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.AnsViewholder {
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.AnswerActivity {
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.AnswerMember {
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.AskActivity {
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.BottomSheetF2 {
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.BottomSheetMenu {
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.BuildConfig {
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.CmntViewholder {
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.CommentMember {
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.CommentsActivity {
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.CreateProfile {
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.Fragment1 {
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.Fragment2 {
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.Fragment3 {
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.Fragment4 {
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.ImageActivity {
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.LoginActivity {
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.MainActivity {
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.PostActivity {
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.PostViewholder {
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.Postmember {
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.PrivacyActivity {
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.QuestionMember {
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.RegisterActivity {
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.Related {
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.ReplyActivity {
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.Splashscreen {
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.Viewholder_Question {
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.YourQuestions {
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.updateProfile {
+    }
+  }
+  
+
+  com.example.sociobuzz.AddCommentActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.sociobuzz.AddCommentActivity o-- com.example.sociobuzz.CommentMember : member
+  com.example.sociobuzz.AllUsersViewholder -up-|> androidx.recyclerview.widget.RecyclerView.ViewHolder
+  com.example.sociobuzz.AnsViewholder -up-|> androidx.recyclerview.widget.RecyclerView.ViewHolder
+  com.example.sociobuzz.AnswerActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.sociobuzz.AnswerActivity o-- com.example.sociobuzz.AnswerMember : member
+  com.example.sociobuzz.AskActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.sociobuzz.AskActivity o-- com.example.sociobuzz.QuestionMember : member
+  com.example.sociobuzz.BottomSheetF2 -up-|> com.google.android.material.bottomsheet.BottomSheetDialogFragment
+  com.example.sociobuzz.BottomSheetMenu -up-|> com.google.android.material.bottomsheet.BottomSheetDialogFragment
+  com.example.sociobuzz.CmntViewholder -up-|> androidx.recyclerview.widget.RecyclerView.ViewHolder
+  com.example.sociobuzz.CommentsActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.sociobuzz.CreateProfile -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.sociobuzz.CreateProfile o-- com.example.sociobuzz.All_UserMmber : member
+  com.example.sociobuzz.Fragment1 .up.|> android.view.View.OnClickListener
+  com.example.sociobuzz.Fragment1 -up-|> androidx.fragment.app.Fragment
+  com.example.sociobuzz.Fragment2 .up.|> android.view.View.OnClickListener
+  com.example.sociobuzz.Fragment2 -up-|> androidx.fragment.app.Fragment
+  com.example.sociobuzz.Fragment2 o-- com.example.sociobuzz.QuestionMember : member
+  com.example.sociobuzz.Fragment3 .up.|> android.view.View.OnClickListener
+  com.example.sociobuzz.Fragment3 -up-|> androidx.fragment.app.Fragment
+  com.example.sociobuzz.Fragment4 .up.|> android.view.View.OnClickListener
+  com.example.sociobuzz.Fragment4 -up-|> androidx.fragment.app.Fragment
+  com.example.sociobuzz.ImageActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.sociobuzz.LoginActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.sociobuzz.MainActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.sociobuzz.PostActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.sociobuzz.PostActivity o-- com.example.sociobuzz.Postmember : postmember
+  com.example.sociobuzz.PostViewholder -up-|> androidx.recyclerview.widget.RecyclerView.ViewHolder
+  com.example.sociobuzz.PrivacyActivity .up.|> android.widget.AdapterView.OnItemSelectedListener
+  com.example.sociobuzz.PrivacyActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.sociobuzz.RegisterActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.sociobuzz.Related -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.sociobuzz.ReplyActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.sociobuzz.Splashscreen -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.sociobuzz.Viewholder_Question -up-|> androidx.recyclerview.widget.RecyclerView.ViewHolder
+  com.example.sociobuzz.YourQuestions -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.sociobuzz.updateProfile -up-|> androidx.appcompat.app.AppCompatActivity
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

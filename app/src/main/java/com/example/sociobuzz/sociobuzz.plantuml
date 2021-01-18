@@ -1,0 +1,660 @@
+@startuml
+
+title __SOCIOBUZZ's Class Diagram__\n
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.AddCommentActivity {
+        ~ AllPost : DatabaseReference
+        ~ button : Button
+        ~ database : FirebaseDatabase
+        ~ editText : EditText
+        ~ name : String
+        ~ postkey : String
+        ~ time : String
+        ~ uid : String
+        ~ url : String
+        # onCreate()
+        # onStart()
+        ~ savecomment()
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.AllUsersViewholder {
+        ~ database : FirebaseDatabase
+        ~ imageViewProfile : ImageView
+        ~ tv_name : TextView
+        ~ tv_prof : TextView
+        + AllUsersViewholder()
+        + setAllUser()
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.All_UserMmber {
+        ~ name : String
+        ~ prof : String
+        ~ uid : String
+        ~ url : String
+        + All_UserMmber()
+        + getName()
+        + getProf()
+        + getUid()
+        + getUrl()
+        + setName()
+        + setProf()
+        + setUid()
+        + setUrl()
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.AnsViewholder {
+        ~ ansTv : TextView
+        ~ database : FirebaseDatabase
+        ~ imageView : ImageView
+        ~ nameTv : TextView
+        ~ reference : DatabaseReference
+        ~ timeTv : TextView
+        ~ upvoteTv : TextView
+        ~ votesCount : int
+        ~ votesNoTv : TextView
+        + AnsViewholder()
+        + setAnswer()
+        + upvotechecker()
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.AnswerActivity {
+        ~ AllQuestions : DatabaseReference
+        ~ button : Button
+        ~ database : FirebaseDatabase
+        ~ editText : EditText
+        ~ name : String
+        ~ postkey : String
+        ~ que : String
+        ~ time : String
+        ~ uid : String
+        ~ url : String
+        # onCreate()
+        # onStart()
+        ~ saveanswer()
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.AnswerMember {
+        ~ answer : String
+        ~ name : String
+        ~ time : String
+        ~ uid : String
+        ~ url : String
+        + AnswerMember()
+        + getAnswer()
+        + getName()
+        + getTime()
+        + getUid()
+        + getUrl()
+        + setAnswer()
+        + setName()
+        + setTime()
+        + setUid()
+        + setUrl()
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.AskActivity {
+        ~ AllQuestion : DatabaseReference
+        ~ button : Button
+        ~ db : FirebaseFirestore
+        ~ documentReference : DocumentReference
+        ~ editText : EditText
+        ~ firebaseDatabase : FirebaseDatabase
+        ~ name : String
+        ~ privacy : String
+        ~ uid : String
+        ~ url : String
+        ~ userQuestion : DatabaseReference
+        # onCreate()
+        # onStart()
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.BottomSheetF2 {
+        ~ cardView : CardView
+        ~ cardView2 : CardView
+        + onCreateView()
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.BottomSheetMenu {
+        ~ currentid : String
+        ~ cv_delete : CardView
+        ~ cv_logout : CardView
+        ~ cv_privacy : CardView
+        ~ db : FirebaseFirestore
+        ~ df : DatabaseReference
+        ~ mAuth : FirebaseAuth
+        ~ mCurrentUser : FirebaseUser
+        ~ name : String
+        ~ reference : DocumentReference
+        ~ url : String
+        + onCreateView()
+        - logout()
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.CmntViewholder {
+        ~ cmntTv : TextView
+        ~ database : FirebaseDatabase
+        ~ imageView : ImageView
+        ~ nameTv : TextView
+        ~ reference : DatabaseReference
+        ~ timeTv : TextView
+        ~ upvoteTv : TextView
+        ~ votesCount : int
+        ~ votesNoTv : TextView
+        + CmntViewholder()
+        + setComments()
+        + upvotechecker()
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.CommentMember {
+        ~ comment : String
+        ~ name : String
+        ~ time : String
+        ~ uid : String
+        ~ url : String
+        + CommentMember()
+        + getComment()
+        + getName()
+        + getTime()
+        + getUid()
+        + getUrl()
+        + setComment()
+        + setName()
+        + setTime()
+        + setUid()
+        + setUrl()
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.CommentsActivity {
+        ~ AllPost : DatabaseReference
+        ~ addComment : TextView
+        ~ database : FirebaseDatabase
+        ~ db : FirebaseFirestore
+        ~ imageViewUser : ImageView
+        ~ key : String
+        ~ post_key : String
+        ~ recyclerView : RecyclerView
+        ~ reference : DocumentReference
+        ~ uid : String
+        ~ voteRef : DatabaseReference
+        ~ votechecker : Boolean
+        # onCreate()
+        # onStart()
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.CreateProfile {
+        ~ button : Button
+        ~ currentUserId : String
+        ~ database : FirebaseDatabase
+        ~ databaseReference : DatabaseReference
+        ~ db : FirebaseFirestore
+        ~ documentReference : DocumentReference
+        ~ etBio : EditText
+        ~ etEmail : EditText
+        ~ etProfession : EditText
+        ~ etWeb : EditText
+        ~ etname : EditText
+        ~ imageUri : Uri
+        ~ imageView : ImageView
+        ~ progressBar : ProgressBar
+        ~ storageReference : StorageReference
+        ~ uploadTask : UploadTask
+        {static} - PICK_IMAGE : int
+        # onActivityResult()
+        # onCreate()
+        - getFileExt()
+        - uploadData()
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.Fragment1 {
+        ~ bioEt : TextView
+        ~ emailEt : TextView
+        ~ firestore : FirebaseFirestore
+        ~ imageButtonEdit : ImageButton
+        ~ imageButtonMenu : ImageButton
+        ~ imageView : ImageView
+        ~ nameEt : TextView
+        ~ profEt : TextView
+        ~ reference : DocumentReference
+        ~ url : String
+        ~ webEt : TextView
+        + onActivityCreated()
+        + onClick()
+        + onCreateView()
+        + onStart()
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.Fragment2 {
+        ~ database : FirebaseDatabase
+        ~ databaseReference : DatabaseReference
+        ~ db : FirebaseFirestore
+        ~ fb : FloatingActionButton
+        ~ fvrt_listRef : DatabaseReference
+        ~ fvrtchecker : Boolean
+        ~ fvrtref : DatabaseReference
+        ~ imageView : ImageView
+        ~ recyclerView : RecyclerView
+        ~ reference : DocumentReference
+        + onActivityCreated()
+        + onClick()
+        + onCreateView()
+        + onStart()
+        ~ delete()
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.Fragment3 {
+        ~ database : FirebaseDatabase
+        ~ recyclerView : RecyclerView
+        ~ reference : DatabaseReference
+        + onActivityCreated()
+        + onClick()
+        + onCreateView()
+        + onStart()
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.Fragment4 {
+        ~ button : Button
+        ~ database : FirebaseDatabase
+        ~ db1 : DatabaseReference
+        ~ db2 : DatabaseReference
+        ~ db3 : DatabaseReference
+        ~ likechecker : Boolean
+        ~ likesref : DatabaseReference
+        ~ recyclerView : RecyclerView
+        ~ reference : DatabaseReference
+        + onActivityCreated()
+        + onClick()
+        + onCreateView()
+        + onStart()
+        - showDialog()
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.ImageActivity {
+        ~ btnDel : Button
+        ~ btnEdit : Button
+        ~ db : FirebaseFirestore
+        ~ imageView : ImageView
+        ~ reference : DocumentReference
+        ~ textView : TextView
+        ~ url : String
+        # onCreate()
+        # onStart()
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.LoginActivity {
+        ~ checkBox : CheckBox
+        ~ emailEt : EditText
+        ~ login_btn : Button
+        ~ mAuth : FirebaseAuth
+        ~ mGoogleLoginBtn : SignInButton
+        ~ mGoogleSignInClient : GoogleSignInClient
+        ~ mRecoveryPassTv : TextView
+        ~ passEt : EditText
+        ~ progressBar : ProgressBar
+        ~ register_btn : Button
+        {static} - RC_SIGN_IN : int
+        # onCreate()
+        # onStart()
+        - sendtoMain()
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.MainActivity {
+        ~ auth : FirebaseAuth
+        - onNav : OnNavigationItemSelectedListener
+        # onCreate()
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.PostActivity {
+        ~ btnchoosefile : Button
+        ~ btnuploadfile : Button
+        ~ database : FirebaseDatabase
+        ~ db1 : DatabaseReference
+        ~ db2 : DatabaseReference
+        ~ db3 : DatabaseReference
+        ~ etdesc : EditText
+        ~ imageView : ImageView
+        ~ mediaController : MediaController
+        ~ name : String
+        ~ progressBar : ProgressBar
+        ~ storageReference : StorageReference
+        ~ type : String
+        ~ uploadTask : UploadTask
+        ~ url : String
+        ~ videoView : VideoView
+        {static} - PICK_FILE : int
+        - selectedUri : Uri
+        # onActivityResult()
+        # onCreate()
+        # onStart()
+        ~ Dopost()
+        - chooseImage()
+        - getFileExt()
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.PostViewholder {
+        ~ cmntref : DatabaseReference
+        ~ commentbtn : ImageButton
+        ~ commentscount : int
+        ~ database : FirebaseDatabase
+        ~ imageViewProfile : ImageView
+        ~ iv_post : ImageView
+        ~ likebtn : ImageButton
+        ~ likescount : int
+        ~ likesref : DatabaseReference
+        ~ menuoptions : ImageButton
+        ~ tv_comment : TextView
+        ~ tv_desc : TextView
+        ~ tv_likes : TextView
+        ~ tv_name : TextView
+        ~ tv_nameprofile : TextView
+        ~ tv_time : TextView
+        + PostViewholder()
+        + likeChecker()
+        + setPost()
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.Postmember {
+        ~ desc : String
+        ~ name : String
+        ~ postUri : String
+        ~ time : String
+        ~ type : String
+        ~ uid : String
+        ~ url : String
+        + Postmember()
+        + getDesc()
+        + getName()
+        + getPostUri()
+        + getTime()
+        + getType()
+        + getUid()
+        + getUrl()
+        + setDesc()
+        + setName()
+        + setPostUri()
+        + setTime()
+        + setType()
+        + setUid()
+        + setUrl()
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.PrivacyActivity {
+        ~ button : Button
+        ~ db : FirebaseFirestore
+        ~ reference : DocumentReference
+        ~ spinner : Spinner
+        ~ status : String[]
+        ~ status_tv : TextView
+        + onItemSelected()
+        + onNothingSelected()
+        # onCreate()
+        # onStart()
+        - savePrivacy()
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.QuestionMember {
+        ~ key : String
+        ~ name : String
+        ~ privacy : String
+        ~ question : String
+        ~ time : String
+        ~ url : String
+        ~ userid : String
+        + QuestionMember()
+        + getKey()
+        + getName()
+        + getPrivacy()
+        + getQuestion()
+        + getTime()
+        + getUrl()
+        + getUserid()
+        + setKey()
+        + setName()
+        + setPrivacy()
+        + setQuestion()
+        + setTime()
+        + setUrl()
+        + setUserid()
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.RegisterActivity {
+        ~ checkBox : CheckBox
+        ~ confirm_pass : EditText
+        ~ emailEt : EditText
+        ~ login_btn : Button
+        ~ mAuth : FirebaseAuth
+        ~ passEt : EditText
+        ~ progressBar : ProgressBar
+        ~ register_btn : Button
+        # onCreate()
+        # onStart()
+        - sendtoMain()
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.Related {
+        ~ database : FirebaseDatabase
+        ~ recyclerView : RecyclerView
+        ~ reference : DatabaseReference
+        # onCreate()
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.ReplyActivity {
+        ~ AllQuestions : DatabaseReference
+        ~ database : FirebaseDatabase
+        ~ db : FirebaseFirestore
+        ~ imageViewQue : ImageView
+        ~ imageViewUser : ImageView
+        ~ key : String
+        ~ nameTv : TextView
+        ~ post_key : String
+        ~ question : String
+        ~ questionTv : TextView
+        ~ recyclerView : RecyclerView
+        ~ reference : DocumentReference
+        ~ reference2 : DocumentReference
+        ~ tvreply : TextView
+        ~ uid : String
+        ~ voteRef : DatabaseReference
+        ~ votechecker : Boolean
+        # onCreate()
+        # onStart()
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.Splashscreen {
+        ~ animTime : long
+        ~ bottom : Animation
+        ~ imageView : ImageView
+        ~ lefttoright : Animation
+        ~ name2Tv : TextView
+        ~ nameTv : TextView
+        ~ top : Animation
+        # onCreate()
+        # onStart()
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.Viewholder_Question {
+        ~ database : FirebaseDatabase
+        ~ delete_btn : TextView
+        ~ favouriteref : DatabaseReference
+        ~ fvrt_btn : ImageButton
+        ~ imageView : ImageView
+        ~ name_result : TextView
+        ~ question_result : TextView
+        ~ reply_btn : TextView
+        ~ replybtn : TextView
+        ~ time_result : TextView
+        + Viewholder_Question()
+        + favouriteChecker()
+        + setitem()
+        + setitemrelated()
+        + setitemyourquestion()
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.YourQuestions {
+        ~ AllQuestion : DatabaseReference
+        ~ database : FirebaseDatabase
+        ~ recyclerView : RecyclerView
+        ~ userQuestion : DatabaseReference
+        # onCreate()
+        ~ delete()
+    }
+  }
+  
+
+  namespace com.example.sociobuzz {
+    class com.example.sociobuzz.updateProfile {
+        ~ button : Button
+        ~ database : FirebaseDatabase
+        ~ db : FirebaseFirestore
+        ~ documentReference : DocumentReference
+        ~ etBio : EditText
+        ~ etEmail : EditText
+        ~ etProfession : EditText
+        ~ etWeb : EditText
+        ~ etname : EditText
+        ~ reference : DatabaseReference
+        # onCreate()
+        # onStart()
+        - updateProfile()
+    }
+  }
+  
+
+  com.example.sociobuzz.AddCommentActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.sociobuzz.AddCommentActivity o-- com.example.sociobuzz.CommentMember : member
+  com.example.sociobuzz.AllUsersViewholder -up-|> androidx.recyclerview.widget.RecyclerView.ViewHolder
+  com.example.sociobuzz.AnsViewholder -up-|> androidx.recyclerview.widget.RecyclerView.ViewHolder
+  com.example.sociobuzz.AnswerActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.sociobuzz.AnswerActivity o-- com.example.sociobuzz.AnswerMember : member
+  com.example.sociobuzz.AskActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.sociobuzz.AskActivity o-- com.example.sociobuzz.QuestionMember : member
+  com.example.sociobuzz.BottomSheetF2 -up-|> com.google.android.material.bottomsheet.BottomSheetDialogFragment
+  com.example.sociobuzz.BottomSheetMenu -up-|> com.google.android.material.bottomsheet.BottomSheetDialogFragment
+  com.example.sociobuzz.CmntViewholder -up-|> androidx.recyclerview.widget.RecyclerView.ViewHolder
+  com.example.sociobuzz.CommentsActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.sociobuzz.CreateProfile -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.sociobuzz.CreateProfile o-- com.example.sociobuzz.All_UserMmber : member
+  com.example.sociobuzz.Fragment1 .up.|> android.view.View.OnClickListener
+  com.example.sociobuzz.Fragment1 -up-|> androidx.fragment.app.Fragment
+  com.example.sociobuzz.Fragment2 .up.|> android.view.View.OnClickListener
+  com.example.sociobuzz.Fragment2 -up-|> androidx.fragment.app.Fragment
+  com.example.sociobuzz.Fragment2 o-- com.example.sociobuzz.QuestionMember : member
+  com.example.sociobuzz.Fragment3 .up.|> android.view.View.OnClickListener
+  com.example.sociobuzz.Fragment3 -up-|> androidx.fragment.app.Fragment
+  com.example.sociobuzz.Fragment4 .up.|> android.view.View.OnClickListener
+  com.example.sociobuzz.Fragment4 -up-|> androidx.fragment.app.Fragment
+  com.example.sociobuzz.ImageActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.sociobuzz.LoginActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.sociobuzz.MainActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.sociobuzz.PostActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.sociobuzz.PostActivity o-- com.example.sociobuzz.Postmember : postmember
+  com.example.sociobuzz.PostViewholder -up-|> androidx.recyclerview.widget.RecyclerView.ViewHolder
+  com.example.sociobuzz.PrivacyActivity .up.|> android.widget.AdapterView.OnItemSelectedListener
+  com.example.sociobuzz.PrivacyActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.sociobuzz.RegisterActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.sociobuzz.Related -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.sociobuzz.ReplyActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.sociobuzz.Splashscreen -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.sociobuzz.Viewholder_Question -up-|> androidx.recyclerview.widget.RecyclerView.ViewHolder
+  com.example.sociobuzz.YourQuestions -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.sociobuzz.updateProfile -up-|> androidx.appcompat.app.AppCompatActivity
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

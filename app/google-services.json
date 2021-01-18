@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "18166743890",
+    "firebase_url": "https://sociobuzz-299a9.firebaseio.com",
+    "project_id": "sociobuzz-299a9",
+    "storage_bucket": "sociobuzz-299a9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:18166743890:android:e6bbcc80224253b079b08b",
+        "android_client_info": {
+          "package_name": "com.example.sociobuzz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "18166743890-g77v44b7lkgo9qa38c74p3f9grn2bb45.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sociobuzz",
+            "certificate_hash": "9acf6db8e69a6985f82c3abfcb5c33d9757f2af2"
+          }
+        },
+        {
+          "client_id": "18166743890-3q2io9f9mi282uq6gjo83a5f1l3pju4o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3U06I0Ek7H8xXRwiLgZbNpJQw1vefmgQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "18166743890-3q2io9f9mi282uq6gjo83a5f1l3pju4o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

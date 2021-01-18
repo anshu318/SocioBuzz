@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    android:gravity="center"
+    tools:context=".LoginActivity">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login UI"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:layout_marginBottom="70dp"
+        android:textAlignment="center"
+        android:gravity="center_horizontal" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="@string/user_email"
+        android:layout_margin="10dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="5dp"
+        android:textColor="@android:color/white"
+        android:drawableStart="@drawable/custom_email_input"
+        android:drawablePadding="10dp"
+        android:inputType="textEmailAddress"
+        android:textColorHint="@color/grey"
+        android:id="@+id/login_email_et"
+        android:background="@drawable/custom_input"
+
+         />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Password"
+        android:layout_margin="10dp"
+        android:paddingStart="10dp"
+        android:drawableStart="@drawable/custom_pass_input"
+        android:drawablePadding="10dp"
+        android:textColor="@android:color/white"
+        android:inputType="textPassword"
+        android:textColorHint="@color/grey"
+        android:id="@+id/login_password_et"
+        android:background="@drawable/custom_input"
+       />
+
+    <CheckBox
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Show Password"
+        android:buttonTint="@android:color/white"
+        android:textColor="@android:color/white"
+        android:layout_marginRight="70dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/login_checkbox"/>
+
+    <Button
+        android:id="@+id/button_login"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_margin="10dp"
+        android:background="@color/white"
+        android:text="Login"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="25sp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@android:color/white"
+        android:textColor="@android:color/holo_red_dark"
+        android:text="Sign Up"
+        android:layout_margin="10dp"
+        android:id="@+id/login_to_signup"
+        android:textSize="25sp"/>
+
+
+    <TextView
+        android:id="@+id/recoveryPassTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_to_signup"
+        android:text="Forget Password?"
+        android:textAlignment="center"
+        android:clickable="true"
+        android:textColor="@color/white"
+        android:focusable="true" />
+
+
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressbar_login"
+        android:indeterminate="true"
+        android:indeterminateTint="@android:color/white"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:visibility="invisible"
+        android:layout_marginTop="20dp"
+        />
+
+
+
+</LinearLayout>
