@@ -24,6 +24,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -32,6 +33,11 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.gun0912.tedpermission.PermissionListener;
+
+import java.util.List;
 
 public class Fragment4 extends Fragment implements View.OnClickListener {
 
@@ -278,6 +284,15 @@ public class Fragment4 extends Fragment implements View.OnClickListener {
                     }
                 });
 
+                StorageReference reference = FirebaseStorage.getInstance().getReferenceFromUrl(url);
+                reference.delete()
+                        .addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void aVoid) {
+                                Toast.makeText(getActivity(), "Post Deleted", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+
                 alertDialog.dismiss();
             }
         });
@@ -285,6 +300,19 @@ public class Fragment4 extends Fragment implements View.OnClickListener {
         download.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                PermissionListener permissionListener = new PermissionListener() {
+                    @Override
+                    public void onPermissionGranted() {
+
+                    }
+
+                    @Override
+                    public void onPermissionDenied(List<String> deniedPermissions) {
+
+                    }
+                };
+
                 if (type.equals("iv")) {
                     DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
                     request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI | DownloadManager.Request.NETWORK_MOBILE);
