@@ -10,4 +10,6 @@
     <color name="grey">#AAA4AA</color>
     <color name="red">#cf1717</color>
     <color name="orange">#FF8C00</color>
+    <color name="coppersulphate">#00FFFF</color>
+    <color name="deepblue">#00008B</color>
 </resources>

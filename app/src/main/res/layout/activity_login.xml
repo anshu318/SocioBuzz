@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/black"
+    android:background="@drawable/gradient"
     android:gravity="center"
     tools:context=".LoginActivity">
 
@@ -14,7 +14,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Login UI"
-        android:textColor="@android:color/white"
+        android:textColor="@color/deepblue"
+        android:textStyle="bold"
         android:textSize="30sp"
         android:layout_marginBottom="70dp"
         android:textAlignment="center"
@@ -27,7 +28,7 @@
         android:layout_margin="10dp"
         android:paddingStart="10dp"
         android:paddingEnd="5dp"
-        android:textColor="@android:color/white"
+        android:textColor="@color/deepblue"
         android:drawableStart="@drawable/custom_email_input"
         android:drawablePadding="10dp"
         android:inputType="textEmailAddress"
@@ -45,7 +46,7 @@
         android:paddingStart="10dp"
         android:drawableStart="@drawable/custom_pass_input"
         android:drawablePadding="10dp"
-        android:textColor="@android:color/white"
+        android:textColor="@color/deepblue"
         android:inputType="textPassword"
         android:textColorHint="@color/grey"
         android:id="@+id/login_password_et"
@@ -69,14 +70,14 @@
         android:layout_margin="10dp"
         android:background="@color/white"
         android:text="Login"
-        android:textColor="@android:color/holo_red_dark"
+        android:textColor="@color/deepblue"
         android:textSize="25sp" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="35dp"
         android:background="@android:color/white"
-        android:textColor="@android:color/holo_red_dark"
+        android:textColor="@color/deepblue"
         android:text="Sign Up"
         android:layout_margin="10dp"
         android:id="@+id/login_to_signup"

@@ -1,5 +1,6 @@
 package com.example.sociobuzz;
 
+import android.Manifest;
 import android.app.AlertDialog;
 import android.app.DownloadManager;
 import android.content.ClipData;
@@ -36,6 +37,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.gun0912.tedpermission.PermissionListener;
+import com.gun0912.tedpermission.TedPermission;
 
 import java.util.List;
 
@@ -304,44 +306,48 @@ public class Fragment4 extends Fragment implements View.OnClickListener {
                 PermissionListener permissionListener = new PermissionListener() {
                     @Override
                     public void onPermissionGranted() {
+                       if (type.equals("iv")) {
+                            DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
+                            request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI | DownloadManager.Request.NETWORK_MOBILE);
+                            request.setTitle("Download");
+                            request.setDescription("Downloading Image....");
+                            request.allowScanningByMediaScanner();
+                            request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+                            request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS,name+System.currentTimeMillis() + ".jpg");
+                            DownloadManager manager = (DownloadManager)getActivity().getSystemService(Context.DOWNLOAD_SERVICE);
+                            manager.enqueue(request);
 
+                            Toast.makeText(getActivity(), "Downloading", Toast.LENGTH_SHORT).show();
+
+                            alertDialog.dismiss();
+                        }else {
+                            DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
+                            request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI | DownloadManager.Request.NETWORK_MOBILE);
+                            request.setTitle("Download");
+                            request.setDescription("Downloading Video....");
+                            request.allowScanningByMediaScanner();
+                            request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+                            request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS,name+System.currentTimeMillis() + ".mp4");
+                            DownloadManager manager = (DownloadManager)getActivity().getSystemService(Context.DOWNLOAD_SERVICE);
+                            manager.enqueue(request);
+
+                            Toast.makeText(getActivity(), "Downloading", Toast.LENGTH_SHORT).show();
+
+                            alertDialog.dismiss();
+                        }
                     }
 
                     @Override
                     public void onPermissionDenied(List<String> deniedPermissions) {
-
+                        Toast.makeText(getActivity(), "No Permissions", Toast.LENGTH_SHORT).show();
                     }
                 };
+                TedPermission.with(getActivity())
+                        .setPermissionListener(permissionListener)
+                        .setPermissions(Manifest.permission.INTERNET,Manifest.permission.READ_EXTERNAL_STORAGE)
+                        .check();
 
-                if (type.equals("iv")) {
-                    DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
-                    request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI | DownloadManager.Request.NETWORK_MOBILE);
-                    request.setTitle("Download");
-                    request.setDescription("Downloading Image....");
-                    request.allowScanningByMediaScanner();
-                    request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
-                    request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS,name+System.currentTimeMillis() + ".jpg");
-                    DownloadManager manager = (DownloadManager)getActivity().getSystemService(Context.DOWNLOAD_SERVICE);
-                    manager.enqueue(request);
 
-                    Toast.makeText(getActivity(), "Downloading", Toast.LENGTH_SHORT).show();
-
-                    alertDialog.dismiss();
-                }else {
-                    DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
-                    request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI | DownloadManager.Request.NETWORK_MOBILE);
-                    request.setTitle("Download");
-                    request.setDescription("Downloading Video....");
-                    request.allowScanningByMediaScanner();
-                    request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
-                    request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS,name+System.currentTimeMillis() + ".mp4");
-                    DownloadManager manager = (DownloadManager)getActivity().getSystemService(Context.DOWNLOAD_SERVICE);
-                    manager.enqueue(request);
-
-                    Toast.makeText(getActivity(), "Downloading", Toast.LENGTH_SHORT).show();
-
-                    alertDialog.dismiss();
-                }
             }
         });
 

@@ -30,16 +30,16 @@ public class Splashscreen extends AppCompatActivity {
 
 
         imageView = findViewById(R.id.iv_logo_splash);
-        name2Tv = findViewById(R.id.tv_splash_name2);
-        nameTv = findViewById(R.id.tv_splash_name);
+        //name2Tv = findViewById(R.id.tv_splash_name2);
+        //nameTv = findViewById(R.id.tv_splash_name);
 
         lefttoright = AnimationUtils.loadAnimation(this, R.anim.lefttoright);
         top = AnimationUtils.loadAnimation(this, R.anim.top);
         bottom = AnimationUtils.loadAnimation(this, R.anim.bottom);
 
-        imageView.setAnimation(lefttoright);
-        name2Tv.setAnimation(bottom);
-        nameTv.setAnimation(bottom);
+        imageView.setAnimation(top);
+        //name2Tv.setAnimation(bottom);
+        //nameTv.setAnimation(bottom);
 
         //ObjectAnimator animatorY = ObjectAnimator.ofFloat(imageView,"y",350f);
         //ObjectAnimator animatorname = ObjectAnimator.ofFloat(nameTv,"z",300f);
