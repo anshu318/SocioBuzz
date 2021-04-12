@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CommentsActivity">
+    tools:context=".CommentsActivity"
+    android:background="@drawable/gradient">
 
 
 
@@ -50,7 +51,7 @@
             android:padding="7dp"
             android:paddingStart="20dp"
             android:text="Add Comments.."
-            android:textColor="@color/red"
+            android:textColor="@color/deepblue"
             android:textSize="15sp"
             android:textStyle="bold"
             android:focusable="true" />

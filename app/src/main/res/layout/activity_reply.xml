@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ReplyActivity">
+    tools:context=".ReplyActivity"
+    android:background="@drawable/gradient">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -132,7 +133,7 @@
             android:padding="7dp"
             android:paddingStart="20dp"
             android:text="Add a reply.."
-            android:textColor="@color/red"
+            android:textColor="@color/deepblue"
             android:textSize="15sp"
             android:textStyle="bold" />
 

@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="10dp"
-    android:background="@android:color/black"
     tools:context=".ImageActivity">
 
     <TextView
@@ -15,7 +14,7 @@
         android:text="Name"
         android:id="@+id/tv_name_image"
         android:textSize="24sp"
-        android:textColor="@android:color/white"/>
+        android:textColor="@color/deepblue"/>
 
     <ImageView
         android:layout_width="match_parent"
@@ -30,7 +29,7 @@
         android:text="Edit"
         android:id="@+id/btn_edit_iv"
         android:background="@drawable/button_back"
-        android:textColor="@android:color/white"
+        android:textColor="@color/coppersulphate"
         android:textSize="20sp"/>
 
     <Button
@@ -40,6 +39,6 @@
         android:layout_marginTop="10dp"
         android:id="@+id/btn_del_iv"
         android:background="@drawable/button_back"
-        android:textColor="@android:color/white"
+        android:textColor="@color/coppersulphate"
         android:textSize="20sp"/>
 </LinearLayout>

@@ -4,4 +4,13 @@
         <!-- Primary brand color. -->
 
     </style>
+
+    <style name="Theme.SocioBuzz.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.SocioBuzz.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.SocioBuzz.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

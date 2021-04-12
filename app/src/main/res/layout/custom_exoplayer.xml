@@ -33,7 +33,7 @@
             android:includeFontPadding="false"
             android:paddingLeft="4dp"
             android:paddingRight="4dp"
-            android:textColor="@color/red"
+            android:textColor="@color/white"
             android:textSize="10sp"
             android:textStyle="normal"
             />
@@ -43,7 +43,7 @@
             android:layout_width="0dp"
             android:layout_height="26dp"
             android:id="@+id/exo_progress"
-            app:played_color="@color/red"
+            app:played_color="@color/white"
             android:layout_weight="1"/>
 
 
@@ -54,7 +54,7 @@
             android:includeFontPadding="false"
             android:paddingLeft="4dp"
             android:paddingRight="4dp"
-            android:textColor="@color/red"
+            android:textColor="@color/white"
             android:textSize="10sp"
             android:textStyle="normal"
             />

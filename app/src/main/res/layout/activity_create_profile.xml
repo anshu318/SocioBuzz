@@ -6,13 +6,15 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".CreateProfile">
+    tools:context=".CreateProfile"
+    android:background="@color/coppersulphate">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Create Profile"
-        android:textColor="@android:color/holo_red_light"
+        android:textColor="@color/deepblue"
+        android:textStyle="bold"
         android:textSize="20sp"
         android:textAlignment="center"
         android:gravity="center_horizontal"
@@ -96,8 +98,8 @@
         android:layout_width="match_parent"
         android:text="Save Profile"
         android:layout_margin="10dp"
-        android:background="@android:color/holo_red_light"
-        android:textColor="@android:color/white"
+        android:background="@color/deepblue"
+        android:textColor="@color/coppersulphate"
         android:textSize="20sp"
 
         android:layout_marginTop="20dp"

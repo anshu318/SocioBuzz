@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white"
+    android:background="@drawable/gradient"
     tools:context=".AskActivity">
 
     <EditText
@@ -16,7 +16,7 @@
         android:background="@drawable/custom_input_question"
         android:padding="10dp"
         android:hint="Ask Anything"
-        android:textColorHint="@color/red"
+        android:textColorHint="@color/deepblue"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -28,9 +28,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="20dp"
-        android:backgroundTint="@color/red"
+        android:backgroundTint="@color/deepblue"
         android:text="Submit"
-        android:textColor="@color/white"
+        android:textColor="@color/coppersulphate"
         android:textSize="20sp"
         android:textStyle="bold" />
 

@@ -44,7 +44,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="10sp"
-                android:textColor="@color/red"
+                android:textColor="@color/deepblue"
                 android:id="@+id/yourque_time_que_item_tv"
                 android:hint="time"
                 android:layout_gravity="right"
@@ -79,7 +79,7 @@
                     android:layout_height="wrap_content"
                     android:clickable="true"
                     android:id="@+id/yourque_reply_item_que"
-                    android:textColor="@color/red"
+                    android:textColor="@color/deepblue"
                     android:textSize="20sp"
                     android:text="Delete"
                     android:paddingRight="25dp"/>

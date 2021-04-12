@@ -2,7 +2,9 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/gradient"
+    >
     
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -16,9 +18,10 @@
             android:layout_height="match_parent"
             android:text="Related"
             android:textSize="20sp"
-            android:textColor="@color/red"
+            android:textColor="@color/deepblue"
             android:drawableStart="@drawable/ic_baseline_bookmarks_24"
             android:drawablePadding="10dp"
+            android:background="@color/coppersulphate"
             android:padding="10dp"/>
 
     </androidx.cardview.widget.CardView>
@@ -35,9 +38,10 @@
             android:layout_height="match_parent"
             android:text="Your Questions"
             android:textSize="20sp"
-            android:textColor="@color/red"
+            android:textColor="@color/deepblue"
             android:drawableStart="@drawable/ic_baseline_restore_24"
             android:drawablePadding="10dp"
+            android:background="@color/coppersulphate"
             android:padding="10dp"/>
 
     </androidx.cardview.widget.CardView>

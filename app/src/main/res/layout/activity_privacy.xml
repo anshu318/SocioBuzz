@@ -5,20 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white"
+    android:background="@drawable/gradient"
     tools:context=".PrivacyActivity">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        app:cardBackgroundColor="@color/white"
+        app:cardBackgroundColor="@color/coppersulphate"
         android:layout_marginBottom="100dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Account Status"
-            android:textColor="@color/red"
+            android:textColor="@color/deepblue"
             android:textSize="20sp"
             android:layout_gravity="center_vertical"
             android:padding="5dp"
@@ -36,7 +36,7 @@
         android:text="Account Privacy"
         android:textSize="20sp"
         android:padding="5dp"
-        android:textColor="@color/black"
+        android:textColor="@color/deepblue"
         android:layout_marginStart="40dp"/>
 
     <TextView
@@ -46,7 +46,7 @@
         android:id="@+id/tv_status"
         android:textSize="15sp"
         android:layout_marginLeft="10dp"
-        android:textColor="@android:color/darker_gray"
+        android:textColor="@color/white"
         android:layout_marginStart="50dp"
 
         />
@@ -69,7 +69,7 @@
         android:layout_height="wrap_content"
         android:text="Save Status"
         android:id="@+id/btn_privacy"
-        android:textColor="@color/white"
+        android:textColor="@color/coppersulphate"
         android:background="@drawable/button_back"
         android:layout_margin="20dp"
         android:textStyle="bold"/>

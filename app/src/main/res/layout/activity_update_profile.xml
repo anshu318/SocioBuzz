@@ -6,13 +6,15 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".updateProfile">
+    tools:context=".updateProfile"
+    android:background="@color/coppersulphate">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Update Profile"
-        android:textColor="@color/red"
+        android:textColor="@color/deepblue"
+        android:textStyle="bold"
         android:textSize="30sp"
         android:textAlignment="center"
         android:gravity="center_horizontal"
@@ -58,7 +60,7 @@
         android:paddingStart="5dp"
         android:drawablePadding="7dp"
         android:textColor="@android:color/darker_gray"
-        android:drawableLeft="@drawable/ic_baseline_email_24"
+        android:drawableLeft="@drawable/ic_baseline_attach_email_24"
         android:paddingLeft="10dp" />
 
     <EditText
@@ -79,9 +81,9 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
 
-        android:backgroundTint="@color/red"
+        android:backgroundTint="@color/deepblue"
         android:text="Save Profile"
-        android:textColor="@android:color/white"
+        android:textColor="@color/coppersulphate"
 
         android:textSize="20sp" />
 

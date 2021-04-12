@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
-        app:cardBackgroundColor="@color/white">
+        app:cardBackgroundColor="@color/coppersulphate">
 
 
 
@@ -24,7 +24,7 @@
         android:paddingLeft="20dp"
         android:text="Explore"
         android:textSize="20sp"
-        android:textColor="@color/red"
+        android:textColor="@color/deepblue"
         android:textStyle="bold"
         android:drawableStart="@drawable/ic_baseline_keyboard_arrow_left_24"
         android:drawablePadding="5dp"
@@ -40,7 +40,7 @@
             android:background="@drawable/button_circle"
             android:text="Create Post"
 
-            android:textColor="@color/white"
+            android:textColor="@color/coppersulphate"
             android:textSize="15sp"
             android:textStyle="bold" />
 

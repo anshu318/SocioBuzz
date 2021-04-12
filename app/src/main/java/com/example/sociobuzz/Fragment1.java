@@ -28,7 +28,7 @@ import com.squareup.picasso.Picasso;
 public class Fragment1 extends Fragment implements View.OnClickListener{
 
     ImageView imageView;
-    TextView nameEt,profEt,bioEt,emailEt,webEt;
+    TextView nameEt,profEt,bioEt,emailEt,webEt,postTv;
     ImageButton imageButtonEdit,imageButtonMenu;
     DocumentReference reference;
     FirebaseFirestore firestore;
@@ -61,10 +61,12 @@ public class Fragment1 extends Fragment implements View.OnClickListener{
         bioEt = getActivity().findViewById(R.id.tv_bio_f1);
         emailEt = getActivity().findViewById(R.id.tv_email_f1);
         webEt = getActivity().findViewById(R.id.tv_web_f1);
+        postTv = getActivity().findViewById(R.id.tv_post_f1);
 
 
         imageButtonEdit = getActivity().findViewById(R.id.ib_edit_f1);
         imageButtonMenu = getActivity().findViewById(R.id.ib_menu_f1);
+        postTv.setOnClickListener(this);
 
 
         imageButtonMenu.setOnClickListener(this);
@@ -88,6 +90,10 @@ public class Fragment1 extends Fragment implements View.OnClickListener{
             case R.id.iv_f1:
                 Intent intent1 = new Intent(getActivity(),ImageActivity.class);
                 startActivity(intent1);
+                break;
+            case R.id.tv_post_f1:
+                Intent intent5 = new Intent(getActivity(),IndividualPost.class);
+                startActivity(intent5);
                 break;
             case R.id.tv_web_f1:
                 try {

@@ -7,6 +7,7 @@
     android:layout_margin="5dp"
     app:cardCornerRadius="5dp"
     app:cardBackgroundColor="@android:color/white"
+
     android:layout_height="wrap_content">
 
 
@@ -63,7 +64,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/red"
+                    android:textColor="@color/grey"
                     android:hint="time"
                     android:textSize="15sp"
                     android:id="@+id/tv_time_post"

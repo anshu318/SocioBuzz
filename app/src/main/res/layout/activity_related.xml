@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Related">
+    tools:context=".Related"
+    android:background="@drawable/gradient">
 
     <TextView
         android:layout_width="match_parent"
@@ -13,7 +14,7 @@
         android:text="Related List"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:textColor="@color/red"
+        android:textColor="@color/deepblue"
         android:padding="5dp"
         android:textAlignment="center"/>
 

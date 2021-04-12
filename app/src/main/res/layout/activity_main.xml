@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient"
     tools:context=".MainActivity">
 
     <FrameLayout
@@ -18,9 +19,9 @@
         android:layout_width="match_parent"
         android:layout_height="43dp"
         android:layout_alignParentBottom="true"
-        android:background="@color/white"
-        app:itemIconTint="@color/black"
-        app:itemTextColor="@color/black"
+        android:background="@color/deepblue"
+        app:itemIconTint="@color/coppersulphate"
+        app:itemTextColor="@color/coppersulphate"
         app:menu="@menu/bottom_menu"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="49dp" />
