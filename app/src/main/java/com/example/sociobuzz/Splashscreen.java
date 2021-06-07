@@ -18,7 +18,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class Splashscreen extends AppCompatActivity {
 
-    ImageView imageView;
+    ImageView imageView,imageViewText;
     TextView nameTv,name2Tv;
     Animation top, bottom, lefttoright;
     long animTime = 2000;
@@ -30,6 +30,7 @@ public class Splashscreen extends AppCompatActivity {
 
 
         imageView = findViewById(R.id.iv_logo_splash);
+        //imageViewText = findViewById(R.id.iv_logo_splash_text);
         //name2Tv = findViewById(R.id.tv_splash_name2);
         //nameTv = findViewById(R.id.tv_splash_name);
 
@@ -38,6 +39,7 @@ public class Splashscreen extends AppCompatActivity {
         bottom = AnimationUtils.loadAnimation(this, R.anim.bottom);
 
         imageView.setAnimation(top);
+        //imageViewText.setAnimation(bottom);
         //name2Tv.setAnimation(bottom);
         //nameTv.setAnimation(bottom);
 

@@ -1,24 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.sociobuzz">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/bluetiger"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/bluetiger"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SocioBuzz">
+        <activity android:name=".UpdatePhoto"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
+        <activity android:name=".MessageActivity" />
+        <activity android:name=".ChatActivity" />
+        <activity android:name=".FollowerActivity" />
+        <activity android:name=".SendImage" />
+        <activity
+            android:name=".ShowUser"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity
             android:name=".IndividualPost"
             android:label="@string/title_activity_individual_post"
-            android:theme="@style/Theme.SocioBuzz.NoActionBar">
-
-        </activity>
+            android:theme="@style/Theme.SocioBuzz.NoActionBar" />
         <activity android:name=".AddCommentActivity" />
         <activity android:name=".CommentsActivity" />
         <activity
@@ -58,6 +67,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
     </application>
 

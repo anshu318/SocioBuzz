@@ -4,20 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/deepblue"
+    android:background="@drawable/gradient2"
     tools:context=".Splashscreen">
 
     <ImageView
         android:id="@+id/iv_logo_splash"
-        android:layout_width="272dp"
-        android:layout_height="282dp"
-        android:src="@drawable/imglogo"
+        android:layout_width="314dp"
+        android:layout_height="303dp"
+        android:src="@drawable/sblogofinal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.575"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.409" />
+        app:layout_constraintVertical_bias="0.371" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

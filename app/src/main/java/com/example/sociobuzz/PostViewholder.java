@@ -17,9 +17,6 @@ import com.google.android.exoplayer2.extractor.DefaultExtractorsFactory;
 import com.google.android.exoplayer2.extractor.ExtractorsFactory;
 import com.google.android.exoplayer2.source.ExtractorMediaSource;
 import com.google.android.exoplayer2.source.MediaSource;
-import com.google.android.exoplayer2.trackselection.AdaptiveTrackSelection;
-import com.google.android.exoplayer2.trackselection.DefaultTrackSelector;
-import com.google.android.exoplayer2.trackselection.TrackSelector;
 import com.google.android.exoplayer2.ui.PlayerView;
 import com.google.android.exoplayer2.upstream.BandwidthMeter;
 import com.google.android.exoplayer2.upstream.DefaultBandwidthMeter;
@@ -78,7 +75,7 @@ public class PostViewholder extends RecyclerView.ViewHolder {
             try {
 
                 BandwidthMeter bandwidthMeter = new DefaultBandwidthMeter.Builder(activity).build();
-                TrackSelector trackSelector = new DefaultTrackSelector(new AdaptiveTrackSelection.Factory(bandwidthMeter));
+                //TrackSelector trackSelector = new DefaultTrackSelector(new AdaptiveTrackSelection.Factory(bandwidthMeter));
                 exoPlayer = (SimpleExoPlayer) ExoPlayerFactory.newSimpleInstance(activity);
                 Uri video = Uri.parse(postUri);
                 DefaultHttpDataSourceFactory df = new DefaultHttpDataSourceFactory("video");

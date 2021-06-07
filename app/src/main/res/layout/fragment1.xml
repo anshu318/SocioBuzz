@@ -16,7 +16,7 @@
         <ImageButton
             android:id="@+id/ib_menu_f1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="9dp"
             android:layout_gravity="left|center_vertical"
             android:layout_margin="10dp"
             android:background="@android:color/transparent"
@@ -65,7 +65,7 @@
                 android:id="@+id/iv_f1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/ic_person"
+                android:background="@drawable/ic_action_name"
                 android:clickable="true"
                 android:scaleType="fitCenter" />
 
@@ -276,17 +276,17 @@
 
     </LinearLayout>
 
-   <!--<TextView
+   <TextView
         android:id="@+id/tv_addstories_f1"
         android:layout_width="match_parent"
         android:layout_height="35dp"
         android:layout_margin="5dp"
-        android:background="@drawable/border_deco"
+        android:background="@drawable/button_back"
         android:gravity="center"
         android:padding="2dp"
         android:text="Add Stories"
-        android:textColor="@color/red"
-        android:textSize="20sp" />-->
+        android:textColor="@color/coppersulphate"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/btn_sendmessage_f1"
@@ -295,6 +295,7 @@
         android:layout_margin="2dp"
         android:background="@drawable/button_back"
         android:text="Send Message"
+
         android:textColor="@color/coppersulphate"
         android:textSize="13sp" />
 

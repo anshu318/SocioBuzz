@@ -19,8 +19,6 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.gms.auth.api.signin.GoogleSignInClient;
-import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -29,11 +27,13 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class LoginActivity extends AppCompatActivity {
+//import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+
+public abstract class LoginActivity extends AppCompatActivity {
 
 
     private static final int RC_SIGN_IN = 100 ;
-    GoogleSignInClient mGoogleSignInClient;
+   // GoogleSignInClient mGoogleSignInClient;
 
     EditText emailEt,passEt;
     Button register_btn,login_btn;
@@ -41,7 +41,7 @@ public class LoginActivity extends AppCompatActivity {
     ProgressBar progressBar;
     FirebaseAuth mAuth;
     TextView mRecoveryPassTv;
-    SignInButton mGoogleLoginBtn;
+    //SignInButton mGoogleLoginBtn;
 
 
     @Override

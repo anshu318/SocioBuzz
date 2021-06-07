@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -30,6 +31,7 @@ public class Fragment1 extends Fragment implements View.OnClickListener{
     ImageView imageView;
     TextView nameEt,profEt,bioEt,emailEt,webEt,postTv;
     ImageButton imageButtonEdit,imageButtonMenu;
+    Button btnsendmessage;
     DocumentReference reference;
     FirebaseFirestore firestore;
     String url;
@@ -62,7 +64,7 @@ public class Fragment1 extends Fragment implements View.OnClickListener{
         emailEt = getActivity().findViewById(R.id.tv_email_f1);
         webEt = getActivity().findViewById(R.id.tv_web_f1);
         postTv = getActivity().findViewById(R.id.tv_post_f1);
-
+        btnsendmessage = getActivity().findViewById(R.id.btn_sendmessage_f1);
 
         imageButtonEdit = getActivity().findViewById(R.id.ib_edit_f1);
         imageButtonMenu = getActivity().findViewById(R.id.ib_menu_f1);
@@ -72,6 +74,7 @@ public class Fragment1 extends Fragment implements View.OnClickListener{
         imageButtonMenu.setOnClickListener(this);
         imageButtonEdit.setOnClickListener(this);
         imageView.setOnClickListener(this);
+        btnsendmessage.setOnClickListener(this);
         webEt.setOnClickListener(this);
     }
 
@@ -94,6 +97,10 @@ public class Fragment1 extends Fragment implements View.OnClickListener{
             case R.id.tv_post_f1:
                 Intent intent5 = new Intent(getActivity(),IndividualPost.class);
                 startActivity(intent5);
+                break;
+            case R.id.btn_sendmessage_f1:
+                Intent intent6 = new Intent(getActivity(),ChatActivity.class);
+                startActivity(intent6);
                 break;
             case R.id.tv_web_f1:
                 try {

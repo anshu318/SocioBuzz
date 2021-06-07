@@ -62,7 +62,7 @@ public class VideoTab extends Fragment {
                         String currentuserid = user.getUid();
 
                         final  String postkey = getRef(position).getKey();
-                        holder.setVideo(getActivity(),model.getName(),model.getUrl(),model.getPostUri(),
+                        holder.SetVideo(getActivity(),model.getName(),model.getUrl(),model.getPostUri(),
                                 model.getTime(),model.getUid(),model.getType(),model.getDesc());
 
 

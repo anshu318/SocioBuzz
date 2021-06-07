@@ -12,4 +12,6 @@
     <color name="orange">#FF8C00</color>
     <color name="coppersulphate">#00FFFF</color>
     <color name="deepblue">#00008B</color>
+    <color name="start">#FF061E</color>
+    <color name="textcolorgrey">#696969</color>
 </resources>
