@@ -27,7 +27,7 @@
         <activity
             android:name=".IndividualPost"
             android:label="@string/title_activity_individual_post"
-            android:theme="@style/Theme.SocioBuzz.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity android:name=".AddCommentActivity" />
         <activity android:name=".CommentsActivity" />
         <activity

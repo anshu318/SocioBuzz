@@ -29,7 +29,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 //import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 
-public abstract class LoginActivity extends AppCompatActivity {
+public  class LoginActivity extends AppCompatActivity {
 
 
     private static final int RC_SIGN_IN = 100 ;
