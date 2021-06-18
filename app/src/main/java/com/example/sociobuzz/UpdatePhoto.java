@@ -102,7 +102,7 @@ public class UpdatePhoto extends AppCompatActivity {
 
     }
     private void updateImage() {
-        progressBar.setVisibility(View.VISIBLE);
+        //progressBar.setVisibility(View.VISIBLE);
         final StorageReference reference = storageReference.child(System.currentTimeMillis()+ "."+getFileExt(imageuri));
         uploadTask = reference.putFile(imageuri);
 

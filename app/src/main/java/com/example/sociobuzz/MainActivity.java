@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
         bottomNavigationView.setOnNavigationItemSelectedListener(onNav);
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout,new Fragment1()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, new Fragment4()).commit();
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener onNav = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -45,12 +45,12 @@ public class MainActivity extends AppCompatActivity {
                     break;
 
             }
-            getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout,selected).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, selected).commit();
 
             return true;
         }
     };
-
+}
 
 
    /* @Override
@@ -63,4 +63,3 @@ public class MainActivity extends AppCompatActivity {
             finish();
         }
     }*/
-}

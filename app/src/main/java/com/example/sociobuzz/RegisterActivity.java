@@ -23,7 +23,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 
-public abstract class RegisterActivity extends AppCompatActivity {
+public  class RegisterActivity extends AppCompatActivity {
 
     EditText emailEt,passEt,confirm_pass;
     Button register_btn,login_btn;
